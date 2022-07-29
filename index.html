@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Burgerlandia</title>
+</head>
+<body>
+    <header>
+      <input type="checkbox" id="check">
+      <label class="icon" for="check"><img src="imagenes/menu-icon.png" alt=""></label>
+        <nav>
+            <ul>
+                <li><a href="">Destacados</a></li>
+                <li><a href="">Pedir</a></li>
+                <li><a href="">Sucursales</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h1>BURGERLANDIA</h1>
+            <p>El mundo de las<br>hamburguesas.</p>
+            <a class="boton" href="">Ver Menu</a>
+            <a class="boton" href="">Pedir</a>
+        </div>
+            
+    </header>
+    <main>
+        <section>
+
+            <p class="titulos">PRODUCTOS<br>DESTACADOS</p>
+            <div class="contenedor">
+
+              <div class="productos">
+                <p class="Nombre">La Clásica</p>
+                <img src="imagenes/producto1.jpg" alt="">
+                <a href="">Ver en la carta</a>
+              </div>
+
+              <div class="productos">
+                <p class="Nombre">La Definitiva</p>
+                <img src="imagenes/producto2.jpg" alt="">
+                <a href="">Ver en la carta</a>
+              </div>
+
+              <div class="productos">
+                <p class="Nombre">La Clásica</p>
+                <img src="imagenes/producto1.jpg" alt="">
+                <a href="">Ver en la carta</a>
+              </div>
+
+              <div class="productos">
+                <p class="Nombre">La Definitiva</p>
+                <img src="imagenes/producto2.jpg" alt="">
+                <a href="">Ver en la carta</a>
+              </div>
+
+              <div class="productos">
+                <p class="Nombre">La Clásica</p>
+                <img src="imagenes/producto1.jpg" alt="">
+                <a href="">Ver en la carta</a>
+              </div>
+
+              <div class="productos">
+                <p class="Nombre">La Definitiva</p>
+                <img src="imagenes/producto2.jpg" alt="">
+                <a href="">Ver en la carta</a>
+              </div>
+
+            </div>
+
+            
+
+
+    </section>
+
+    <section>
+      <div class="pedir">
+        <p>HACÉ TU<br>PEDIDO</p>
+        <img src="imagenes/Pedir.jpg" alt="">
+        <a href="">Ir a WhatsApp</a>
+      </div>
+
+    </section>
+
+
+    </main>
+
+
+
+    <script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "flex";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+
+
+    </script>
+</body>
+</html>
