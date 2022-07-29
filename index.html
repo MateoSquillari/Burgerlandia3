@@ -87,51 +87,45 @@
 
     </section>
 
+<section class="sucursales">
+    <p class="titulos">NUESTRA<br>SUCURSAL</p>
+    
+    <!-- The four columns -->
+    <div class="row">
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+    
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
 
+    
+  </section>
     </main>
 
 
 
     <script>
-        let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "flex";  
-  dots[slideIndex-1].className += " active";
-}
-
-
-
-
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-
-
-    </script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+      </script>
 </body>
 </html>
