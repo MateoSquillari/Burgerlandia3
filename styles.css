@@ -6,9 +6,15 @@
     list-style:none;
     text-decoration: none;
 }
+
 body{
   background-color:rgb(10, 10, 10);
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 header, section{
     width: 100%;
     display: flex;
