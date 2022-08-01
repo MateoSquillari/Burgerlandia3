@@ -17,8 +17,8 @@
                 <li><a href="#destacados">Destacados</a></li>
                 <li><a href="#pedir">Pedir</a></li>
                 <li><a href="#sucursal">Sucursal</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         <div>
@@ -112,8 +112,57 @@
       <div id="imgtext"></div>
     </div>
 
+    <div class="row">
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="imagenes/img_nature.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+    
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
     
   </section>
+
+
+  <section id="nosotros">
+    <p class="titulos dos">¿QUIÉNES<br>SOMOS?</p>
+    <div>
+    <img src="imagenes/equipo.jpg" alt="">
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni, quod numquam minus accusantium corrupti, consequuntur corporis autem officiis rerum aliquam! Sunt, nulla quas error natus laborum nostrum in. Nesciunt.
+    Iste ex sed voluptates magni, incidunt velit voluptatibus minus explicabo sit quos ipsum odit ut porro praesentium assumenda nisi quod odio. Eveniet consequatur animi ducimus veritatis quod ipsum nobis aliquam.
+    Debitis accusamus in iste officia accusantium quasi delectus iure? Velit aspernatur voluptatibus aliquid </p>
+  </div>
+  </section>
+
+  <section id="contacto">
+    <p class="titulos">CONTACTANOS</p>
+    <form action="">
+      <label for="nombre">Nombre y Apellido</label>
+      <input type="name" id="nombre" placeholder="Tu nombre y apellido...">
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Tu email...">
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" cols="30" rows="10" placeholder="Escribinos..."></textarea>
+
+      <input type="submit"  id="enviar" value="Enviar">
+    </form>
+  </section>
+
+
     </main>
 
 
