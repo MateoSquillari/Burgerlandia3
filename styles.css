@@ -14,6 +14,11 @@ body{
 html{
   scroll-behavior: smooth;
 }
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 header, section{
     width: 100%;
@@ -26,6 +31,13 @@ section{
 }
 header{
   height: 100vh;
+}
+#navbar{
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  transition: 0.4s;
+  display: none;
 }
 nav{
     width: 100%;
@@ -128,6 +140,7 @@ header div p{
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1000px;
   margin-top: 15px;
 }
 
@@ -137,7 +150,7 @@ header div p{
   align-items: center;
   text-align: center;
   width: 35%;
-  max-width: 400px;
+  max-width: 300px;
   padding: 5px;
   border-radius: 15px;
   border: solid 1px rgb(209, 143, 0);
@@ -170,6 +183,8 @@ header div p{
 .pedir{
   height: 100vh;
   width: 100%;
+  margin-top: 25px;
+  max-width: 830px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,8 +218,9 @@ header div p{
 /* ----------------- SUCURSALES --------------- */
 
 .sucursales{
-  height: 100vh;
-  max-width: 1000px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
 }
 
 .row{
@@ -217,8 +233,7 @@ header div p{
   float: left;
   width: 40%;
   padding: 10px;
-  max-width: 400px;
-  max-height: 1fr 1fr 1fr 1fr;
+  max-width: 500px;
 }
 
 /* Style the images inside the grid */
@@ -276,6 +291,7 @@ header div p{
 }
 #nosotros, #contacto{
   height: 100vh;
+  max-width: 1000px;
 }
 #nosotros div img{
   width: 40%;
@@ -315,7 +331,7 @@ form input, select, textarea{
 
 #mensaje{
   min-height: 100px;
-  max-height: 200px;
+  max-height: 100px;
 }
 
 #enviar{
@@ -327,7 +343,163 @@ form input, select, textarea{
   cursor: pointer;
 }
 
+
+
+footer{
+  background-color: rgb(34,34,34);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.footer-seccion{
+  margin: 50px 0 0 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.footer-seccion div ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-seccion div ul li{
+  margin: 10px 0;
+}
+
+.menubajo{
+  color:rgb(224, 222, 222);
+  font-size: 15px;
+}
+
+.medio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.medio-nombre{
+  color: rgb(224, 222, 222);
+  font-size: 30px;
+}
+
+.desarrollador{
+  color:rgb(10, 10, 10);
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+.desarrollador p a{
+  font-size: 15px;
+}
+
+.abajo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.abajo div p{
+  color: rgb(224, 222, 222);
+  font-size: 15px;
+  text-align: center;
+}
+
+.abajo div a{
+  color: rgb(85, 85, 255);
+  font-size: 13px;
+  border-bottom: solid 2px rgb(85, 85, 255);
+}
+
+
+
+
+
+
+
 @media (max-width: 500px){
-    
+    .sucursales{
+      height: 100vh;
+    }
   }
   
+
+  @media (min-width: 830px){
+   .pedir{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+   }
+   .pedir p{
+    margin-right: 20px;
+   }
+   #nosotros{
+    width: 70%;
+   }
+   .titulos{
+    font-size: 60px;
+    line-height: 50px;
+    margin-top: 80px;
+   }
+   .productos{
+    margin:10px;
+   }
+
+
+
+   header div h1{
+    margin-bottom: 30px;
+    font-size: 80px;
+  }
+
+  header div p{
+    font-size: 60px;
+    margin-bottom: 30px;
+    line-height: 55px;
+  }
+
+  nav{
+    left: 0;
+    height: 50px;
+    background-color: rgb(10, 10, 10, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul{
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin:0;
+  }
+  nav ul li{
+    border-bottom: solid 2px rgb(10, 10, 10, 0);
+    width: 80px;
+  }
+  nav ul li a:hover{
+    border-bottom: solid 1px rgb(253, 242, 230, 0.3);
+  }
+  nav ul li a{
+    border-bottom: solid 2px rgb(10, 10, 10, 0);
+    font-size: 15px;
+  }
+  .icon{
+    display: none;
+  }
+
+  #navbar{
+    display: block;
+  }
+
+  .footer-seccion{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}

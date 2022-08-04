@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
     <title>Burgerlandia</title>
 </head>
 <body>
     <header id="inicio">
       <input type="checkbox" id="check">
       <label class="icon" for="check"><img src="imagenes/menu-icon.png" alt=""></label>
+      <span id="navbar"></span>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -24,8 +26,8 @@
         <div>
             <h1>BURGERLANDIA</h1>
             <p>El mundo de las<br>hamburguesas.</p>
-            <a class="boton" href="">Ver Menu</a>
-            <a class="boton" href="">Pedir</a>
+            <a class="boton" href="https://mateosquillari.github.io/Menu-Claro/">Ver Menu</a>
+            <a class="boton" href="https://api.whatsapp.com/message/FIB6RQPBVUMYK1?autoload=1&app_absent=0">Pedir</a>
         </div>
             
     </header>
@@ -161,10 +163,42 @@
       <input type="submit"  id="enviar" value="Enviar">
     </form>
   </section>
-
-
     </main>
 
+    <footer>
+      <div class="footer-seccion">
+      <div>
+        <ul>
+          <li><a href="index.html" class="menubajo">Inicio</a></li>
+          <li><a href="#destacados" class="menubajo">Destacados</a></li>
+          <li><a href="#pedir" class="menubajo">Pedir</a></li>
+          <li><a href="#sucursal" class="menubajo">Sucursal</a></li>
+          <li><a href="#nosotros" class="menubajo">Nosotros</a></li>
+          <li><a href="#contacto" class="menubajo">Contacto</a></li>
+      </ul>
+      </div>
+
+      <div class="medio">
+        <p class="medio-nombre">Burgerlandia</p>
+        
+      </div>
+
+      <div class="abajo">
+        <div>
+          <p>Redes Sociales</p>
+          <a href="">Instagram</a>
+          <a href="">Facebook</a>
+        </div>
+        <div>
+          <p>Contacto</p>
+          <a href="">351*******</a>
+        </div>
+      </div>
+    </div>
+    <div class="desarrollador">
+      <p>Desarrollado por <a href="">Proyecto Bacarés</a></p>
+    </div>
+    </footer>
 
 
     <script>
@@ -175,6 +209,17 @@
         imgText.innerHTML = imgs.alt;
         expandImg.parentElement.style.display = "block";
       }
+
+
+      window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 100) {
+    document.getElementById("navbar").style.backgroundColor = "rgb(0, 0, 0, 0.4)";
+    } else {
+    document.getElementById("navbar").style.backgroundColor = "rgb(255, 255, 255, 0)";
+  }
+  }
       </script>
 </body>
 </html>
